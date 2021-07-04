@@ -6,6 +6,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+# Interesting Random Joke Generator For You Project
+
+![Website Look](./src/Screenshot.png)
+
+Tech Stack - `React`
+
+Features -
+
+- Generate Joke by First Name, Last Name
+- Filter Recent Search Joke by UserName
+- Storing Recently Search Joke By User
+
+## Project Starter Guide
+
 ### `npm start`
 
 Runs the app in the development mode.\

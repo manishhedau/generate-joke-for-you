@@ -73,3 +73,17 @@ button {
   font-size: 15px;
   text-transform: capitalize;
 }
+
+footer {
+  height: 50px;
+  background-color: black;
+  position: fix;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 10px;
+}

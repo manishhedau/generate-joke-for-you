@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import JokeForm from "./JokeForm";
+import JokeFilter from "./JokeFilter";
+import FilteredJokes from "./FilteredJokes";
 
 function App() {
+  const [recentJoke, setRecentJoke] = useState([]);
+  const [filteredName, setFilteredName] = useState("");
+
+  function addRecentJokeHandler(newJoke) {
+    setRecentJoke((prevState) => {
+      return [newJoke, ...prevState];
+    });
+  }
+
+  function filterChangeHandler(selectedName) {
+    // console.log(selectedName);
+    setFilteredName(selectedName);
+  }
+
+  let filterJoke;
+  if (filteredName === "") {
+    filterJoke = recentJoke;
+  } else {
+    filterJoke = recentJoke.filter((joke) => {
+      return joke.name === filteredName;
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <JokeForm onAddRecentJoke={addRecentJokeHandler} />
+      <div className="recent__jokes">
+        <h3>Recent Search Joke</h3>
+        <JokeFilter
+          selected={filteredName}
+          onChangeFilter={filterChangeHandler}
+          jokes={recentJoke}
+        />
+        <FilteredJokes filterJoke={filterJoke} />
+      </div>
     </div>
   );
 }

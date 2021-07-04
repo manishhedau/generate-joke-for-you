@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+label {
+  margin-right: 5px;
+  padding: 20px;
+  font-size: 18px;
+}
+input {
+  padding: 10px 7px;
+  margin: 5px;
+  border: transparent;
+  width: 15em;
+  border-radius: 10px;
+  border: 0.5px solid rgb(0, 255, 128);
+  outline: none;
+}
+input:active,
+input:focus {
+  box-shadow: 0 0 3px gray;
+  outline: none;
+}
+form {
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  margin: 20px 0 0 50px;
+  padding: 10px;
+  background: linear-gradient(90deg, rgb(0, 255, 128), rgb(95, 228, 113));
+  border: none;
+  color: rgb(49, 46, 46);
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.generated__joke {
+  background-color: rgb(0, 255, 128);
+  color: rgb(43, 40, 40);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 5px gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.show__jokes {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.joke {
+  width: 180px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 255, 128),
+    rgb(95, 223, 228),
+    transparent
+  );
+  padding: 20px;
+  color: rgb(53, 43, 43);
+  margin: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.joke h4 {
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+.joke p {
+  font-size: 15px;
+  text-transform: capitalize;
 }
